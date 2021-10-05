@@ -43,9 +43,9 @@ jobs:
             - checkout
             - run: conda update conda
             - run: conda install python=3.6 --yes
-            - run: conda remove ruamel_yaml --yes
             - run: conda install pytorch --yes
             - run: pip install virtualenv
+            - run: rm C:\tools\miniconda3\lib\site-packages\ruamel_yaml
             - run: python -m virtualenv venv --system-site-packages
             - run: "& venv/Scripts/activate.ps1"
             - run: pip install .[tests]
@@ -63,9 +63,9 @@ jobs:
             - checkout
             - run: conda update conda
             - run: conda install python=3.6 --yes
-            - run: conda remove ruamel_yaml --yes
             - run: conda install pytorch --yes
             - run: pip install virtualenv
+            - run: rm C:\tools\miniconda3\lib\site-packages\ruamel_yaml
             - run: python -m virtualenv venv --system-site-packages
             - run: "& venv/Scripts/activate.ps1"
             - run: pip install .[tests]
