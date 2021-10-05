@@ -43,7 +43,9 @@ jobs:
             - checkout
             - run: conda update conda
             - run: conda install python=3.6 --yes
-            - run: pip install docker-py --ignore-installed ruamel_yaml
+            - run: pip install --upgrade --force-reinstall pip==9.0.3
+            - run: pip install ruamel_yaml --disable-pip-version-check
+            - run: pip install --upgrade pip
             - run: conda install pytorch --yes
             - run: pip install virtualenv
             - run: python -m virtualenv venv --system-site-packages
@@ -63,7 +65,9 @@ jobs:
             - checkout
             - run: conda update conda
             - run: conda install python=3.6 --yes
-            - run: pip install docker-py --ignore-installed ruamel_yaml
+            - run: pip install --upgrade --force-reinstall pip==9.0.3
+            - run: pip install ruamel_yaml --disable-pip-version-check
+            - run: pip install --upgrade pip
             - run: conda install pytorch --yes
             - run: pip install virtualenv
             - run: python -m virtualenv venv --system-site-packages
