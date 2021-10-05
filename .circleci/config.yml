@@ -44,10 +44,10 @@ jobs:
             - run: conda update conda
             - run: conda install python=3.6 --yes
             - run: conda install pytorch --yes
+            - run: conda install ruamel-yaml --yes
             - run: pip install virtualenv
             - run: python -m virtualenv venv --system-site-packages
             - run: "& venv/Scripts/activate.ps1"
-            - run: pip install --ignore-installed ruamel-yaml
             - run: pip install .[tests]
             - run: pip install -r additional-tests-requirements.txt --no-deps
             - run: pip install pyarrow --upgrade
@@ -64,10 +64,10 @@ jobs:
             - run: conda update conda
             - run: conda install python=3.6 --yes
             - run: conda install pytorch --yes
+            - run: conda install ruamel-yaml --yes
             - run: pip install virtualenv
             - run: python -m virtualenv venv --system-site-packages
             - run: "& venv/Scripts/activate.ps1"
-            - run: pip install --ignore-installed ruamel-yaml
             - run: pip install .[tests]
             - run: pip install -r additional-tests-requirements.txt --no-deps
             - run: pip install pyarrow==1.0.0
